@@ -1,0 +1,11 @@
+SELECT
+  ROUND(AVG(TimeToJob_Days), 1) AS avg_days_to_job,
+  MIN(TimeToJob_Days) AS fastest_hire,
+  MAX(TimeToJob_Days) AS longest_hire,
+  APPROX_QUANTILES(TimeToJob_Days, 4)[OFFSET(1)] AS Q1,
+  APPROX_QUANTILES(TimeToJob_Days, 4)[OFFSET(2)] AS median,
+  APPROX_QUANTILES(TimeToJob_Days, 4)[OFFSET(3)] AS Q3
+FROM
+  `jobanalysis2025.job_search_data.job_seekers`
+WHERE
+  GotJob = TRUE;
