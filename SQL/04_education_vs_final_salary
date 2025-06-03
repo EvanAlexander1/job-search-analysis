@@ -1,0 +1,12 @@
+SELECT
+  EducationLevel,
+  COUNT(*) AS total_people,
+  COUNTIF(GotJob = TRUE) AS got_hired,
+  ROUND(COUNTIF(GotJob = TRUE) * 100.0 / COUNT(*), 1) AS hire_rate_percent,
+  ROUND(AVG(FinalSalary), 0) AS avg_final_salary
+FROM
+  `jobanalysis2025.job_search_data.job_seekers`
+GROUP BY
+  EducationLevel
+ORDER BY
+  hire_rate_percent DESC;
