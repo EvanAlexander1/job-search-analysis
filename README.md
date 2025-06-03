@@ -84,6 +84,11 @@ The dataset contains simulated records for 1000 job seekers with the following f
 3. **Visualize Results**  
    Connect BigQuery data to Looker Studio and build interactive dashboards (optional).
 
+   ## Interactive Dashboard
+
+Explore the full interactive dashboard here:  
+[Job Seeker Unemployment Analysis][(https://public.tableau.com/views/JobSearchAnalysis_17489906546120/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+
 ---
 
 ## Recommendations & Consulting Insights
