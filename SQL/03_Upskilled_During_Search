@@ -1,0 +1,10 @@
+  SELECT
+  UpskilledDuringSearch,
+  COUNT(*) AS total_people,
+  COUNTIF(GotJob = TRUE) AS got_job,
+  ROUND(COUNTIF(GotJob = TRUE) * 100.0 / COUNT(*), 2) AS hire_rate,
+  ROUND(AVG(TimeToJob_Days), 1) AS avg_days_to_job
+FROM
+  `jobanalysis2025.job_search_data.job_seekers`
+GROUP BY
+  UpskilledDuringSearch;
